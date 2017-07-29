@@ -43,8 +43,16 @@ function renderMovies(movies) {
     });
 }
 
+function loadWithFetch(url: string) {
+    return Observable.defer(() => {
+        return Observable.fromPromise(fetch(url).then(r => r.json()));
+    })
+}
+
+loadWithFetch('movies.json').subscribe(renderMovies);
+
 click
-    .flatMap(e => load('movies.json'))
+    .flatMap(e => loadWithFetch('movies.json'))
     .subscribe(
         renderMovies,
         e =>  console.log(`Error ${e}`),
