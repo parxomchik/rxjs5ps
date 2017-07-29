@@ -6,6 +6,13 @@ module.exports = {
             {
                 test: /.ts$/,
                 loader: 'ts-loader'
+            },
+            {
+                test: /.css$/,
+                loader: [
+                    'style-loader',
+                    'css-loader'
+                ]
             }
         ]
     },

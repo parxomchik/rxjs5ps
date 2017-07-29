@@ -8,11 +8,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "rxjs": "^5.4.2"
+    "rxjs": "^5.4.2",
+    "style-loader": "^0.18.2"
   },
   "devDependencies": {
     "@types/es6-shim": "^0.31.34",
     "@types/rx": "^4.1.1",
+    "css-loader": "^0.28.4",
     "ts-loader": "^2.3.2",
     "typescript": "^2.4.2",
     "webpack": "^3.4.1",
